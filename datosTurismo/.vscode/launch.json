@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DatosTurismoApplication<datosTurismo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.turismo.datosTurismo.DatosTurismoApplication",
+            "projectName": "datosTurismo",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
