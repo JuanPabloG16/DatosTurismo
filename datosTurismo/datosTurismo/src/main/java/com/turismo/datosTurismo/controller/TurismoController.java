@@ -3,6 +3,7 @@ package com.turismo.datosTurismo.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,6 +18,7 @@ public class TurismoController {
     @Autowired
     TurismoService turismoService;
 
+    @CrossOrigin(origins = "https://c521-45-65-235-36.ngrok-free.app")
     @GetMapping("/getTurismo")
     public List<Turismo_SanAndres> getAllTurismo() {
 
