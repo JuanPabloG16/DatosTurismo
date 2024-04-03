@@ -14,14 +14,18 @@ public class DatosTurismoApplication {
     }
 
     // Habilitar CORS
-	@Bean
-public WebMvcConfigurer corsConfigurer() {
-    return new WebMvcConfigurer() {
-        @Override
-        public void addCorsMappings(CorsRegistry registry) {
-            registry.addMapping("/**").allowedOrigins("http://m59u5jnbfn.loclx.io/","http://localhost:8080", "http://localhost:5173").allowedMethods("GET","POST","PUT","DELETE").allowedHeaders("*").maxAge(3600);
-        }
-    };
-}
-
+    @Bean
+    public WebMvcConfigurer corsConfigurer() {
+        return new WebMvcConfigurer() {
+            @Override
+            public void addCorsMappings(CorsRegistry registry) {
+                // Aquí se está permitiendo el acceso CORS a todas las rutas (/**)
+                // desde todos los orígenes (*).
+                // Se están permitiendo todos los métodos HTTP.
+                // Se están permitiendo todos los encabezados.
+                // Se está estableciendo un tiempo máximo de pre-vuelo (preflight) de 3600 segundos.
+                registry.addMapping("/**").allowedOrigins("*").allowedMethods("*").allowedHeaders("*").maxAge(3600);
+            }
+        };
+    }
 }

@@ -7,18 +7,20 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 import com.turismo.datosTurismo.model.Turismo_SanAndres;
 import com.turismo.datosTurismo.service.TurismoService;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @RestController
+
 @RequestMapping("/api/turismo")
 public class TurismoController {
 
     @Autowired
     TurismoService turismoService;
-
-    @CrossOrigin(origins = "https://c521-45-65-235-36.ngrok-free.app")
+    @CrossOrigin(origins = "http://localhost:5173")
+   
     @GetMapping("/getTurismo")
     public List<Turismo_SanAndres> getAllTurismo() {
 
