@@ -13,19 +13,20 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @RestController
 @RequestMapping("/api/turismo")
-@CrossOrigin(origins = "http://localhost:5173")
 public class TurismoController {
 
     @Autowired
     TurismoService turismoService;
-
+    
+    @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping("/getTurismo")
     public List<Turismo_SanAndres> getAllTurismo() {
         return turismoService.getAll();
     }
 
-    @GetMapping("/getRandomId")
-    public Integer getRandomId() {
-        return turismoService.getRandomId();
+    @CrossOrigin(origins = "http://localhost:5173")
+    @GetMapping("/getRandomTurismoId")
+    public Integer getRandomTurismoId() {
+        return turismoService.getRandomTurismoId();
     }
 }
