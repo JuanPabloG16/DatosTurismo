@@ -10,40 +10,40 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "Turismo_SanAndres")
+@Table(name = "turismo_san_andres")
 public class Turismo_SanAndres {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "Rnt")
-    private Integer Rtn;
+    @Column(name = "rnt")
+    private Integer rtn;
 
-    @Column(name = "Año")
+    @Column(name = "año")
     private int ano;
 
-    @Column(name = "Estado")
+    @Column(name = "estado")
     private String estado;
 
-    @Column(name = "Razon_social")
+    @Column(name = "razon_social")
     private String razonSocial;
 
-    @Column(name = "Categoria")
+    @Column(name = "categoria")
     private String categoria;
 
-    @Column(name = "Subcategoria")
+    @Column(name = "subcategoria")
     private String subcategoria;
 
-    @Column(name = "Departamento")
+    @Column(name = "departamento")
     private String departamento;
 
-    @Column(name = "Municipio")
+    @Column(name = "municipio")
     private String municipio;
 
-    @Column(name = "Habitaciones")
+    @Column(name = "habitaciones")
     private int habitaciones;
 
-    @Column(name = "Camas")
+    @Column(name = "camas")
     private int camas;
 
-    @Column(name = "Empleados")
+    @Column(name = "empleados")
     private int empleados;
 }
