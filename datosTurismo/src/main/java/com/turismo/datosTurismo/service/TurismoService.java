@@ -17,4 +17,9 @@ public class TurismoService {
     public List<Turismo_SanAndres> getAll() {
         return turismoRepository.findAll();
     }
+
+    public Integer getRandomId() {
+        // // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getRandomId'");
+    }
 }
